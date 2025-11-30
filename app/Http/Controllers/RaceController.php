@@ -8,10 +8,7 @@ use Illuminate\Support\Facades\Gate;
 
 class RaceController extends Controller
 {
-    public function __construct()
-    {
-        $this->authorizeResource(Race::class, 'race');
-    }
+    // Se elimina el construct()
 
     public function index()
     {

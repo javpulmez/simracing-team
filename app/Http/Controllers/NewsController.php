@@ -8,10 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
-    public function __construct()
-    {
-        $this->authorizeResource(News::class, 'news');
-    }
+    //Se elimina el constructor()
 
     public function index()
     {

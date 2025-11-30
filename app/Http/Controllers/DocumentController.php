@@ -9,10 +9,7 @@ use Illuminate\Support\Facades\Storage;
 
 class DocumentController extends Controller
 {
-    public function __construct()
-    {
-        $this->authorizeResource(Document::class, 'document');
-    }
+    //Se elimina el constructor()
 
     public function index()
     {

@@ -6,12 +6,13 @@ use App\Models\Driver;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Gate;
 
 class DriverController extends Controller
 {
     public function create()
     {
-        $this->authorize('create', Driver::class);
+        Gate::authorize('create', Driver::class);
         
         // Solo usuarios pilot sin perfil de driver
         $users = User::where('role', 'pilot')
@@ -23,7 +24,7 @@ class DriverController extends Controller
 
     public function store(Request $request)
     {
-        $this->authorize('create', Driver::class);
+        Gate::authorize('create', Driver::class);
         
         $validated = $request->validate([
             'user_id' => 'required|exists:users,id|unique:drivers,user_id',
@@ -46,14 +47,14 @@ class DriverController extends Controller
 
     public function edit(Driver $driver)
     {
-        $this->authorize('update', $driver);
+        Gate::authorize('update', $driver);
         
         return view('drivers.edit', compact('driver'));
     }
 
     public function update(Request $request, Driver $driver)
     {
-        $this->authorize('update', $driver);
+        Gate::authorize('update', $driver);
         
         $validated = $request->validate([
             'nickname' => 'required|string|max:255|unique:drivers,nickname,' . $driver->id,
@@ -78,7 +79,7 @@ class DriverController extends Controller
 
     public function destroy(Driver $driver)
     {
-        $this->authorize('delete', $driver);
+        Gate::authorize('delete', $driver);
         
         if ($driver->photo) {
             Storage::disk('public')->delete($driver->photo);
