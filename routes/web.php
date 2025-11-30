@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Route;
 // Rutas públicas
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/drivers', [HomeController::class, 'drivers'])->name('drivers.public');
-Route::get('/news', [HomeController::class, 'news'])->name('news.public');
-Route::get('/news/{news}', [HomeController::class, 'showNews'])->name('news.show.public');
+Route::get('/noticias', [HomeController::class, 'news'])->name('news.public');
+Route::get('/noticias/{id}', [HomeController::class, 'showNews'])->name('news.show.public');
 
 // Rutas autenticadas
 Route::middleware('auth')->group(function () {

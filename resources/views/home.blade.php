@@ -82,16 +82,16 @@
                     
                     @if($latestNews->count() > 0)
                         <div class="space-y-4">
-                            @foreach($latestNews as $news)
+                            @foreach($latestNews as $newsItem)
                                 <div class="border-b pb-4">
                                     <h3 class="font-bold text-lg mb-2">
-                                        <a href="{{ route('news.show.public', $news) }}" class="hover:text-blue-600">
-                                            {{ $news->title }}
+                                        <a href="{{ route('news.show.public', $newsItem->id) }}" class="hover:text-blue-600">
+                                            {{ $newsItem->title }}
                                         </a>
                                     </h3>
-                                    <p class="text-gray-600 mb-2">{{ Str::limit(strip_tags($news->content), 150) }}</p>
+                                    <p class="text-gray-600 mb-2">{{ Str::limit(strip_tags($newsItem->content), 150) }}</p>
                                     <p class="text-xs text-gray-500">
-                                        Por {{ $news->user->name }} • {{ $news->created_at->diffForHumans() }}
+                                        Por {{ $newsItem->user->name }} • {{ $newsItem->created_at->diffForHumans() }}
                                     </p>
                                 </div>
                             @endforeach

@@ -43,13 +43,15 @@ class HomeController extends Controller
         return view('news.public', compact('news'));
     }
     
-    public function showNews(News $news)
-    {
-        if (!$news->published && (!auth()->check() || !auth()->user()->isAdmin())) {
-            abort(404);
-        }
-        
-        $news->load('user');
-        return view('news.show-public', compact('news'));
+    public function showNews($id)
+   {
+    $news = News::findOrFail($id);
+    
+    if (!$news->published && (!auth()->check() || !auth()->user()->isAdmin())) {
+        abort(404);
     }
+    
+    $news->load('user');
+    return view('news.show-public', compact('news'));
+   }
 }
