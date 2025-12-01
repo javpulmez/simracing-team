@@ -75,7 +75,7 @@ Si deseas correr este proyecto localmente, sigue estos pasos:
 
 ## ✒️ Autor
 
-* **Javier Pulido** - [Perfil de GitHub](https://github.com/javpulmez)
+* **Javier Meza (javpulmez)** - [Perfil de GitHub](https://github.com/javpulmez)
 
 ---
 *Proyecto desarrollado siguiendo los lineamientos del repositorio [samuelmg/programacion-internet](https://github.com/samuelmg/programacion-internet).*
