@@ -1,3 +1,86 @@
+# 🏎️ Simracing Team Project
+
+Sistema web para la gestión de un equipo de Simracing, desarrollado como proyecto final para la materia de Programación para Internet.
+
+![Estado del Proyecto](https://img.shields.io/badge/Estado-En_Desarrollo_(85%25)-yellow)
+![Laravel](https://img.shields.io/badge/Laravel-v10-FF2D20?logo=laravel)
+![PHP](https://img.shields.io/badge/PHP-v8.1-777BB4?logo=php)
+
+## 📋 Descripción
+
+Este proyecto es una aplicación web dinámica construida con el framework **Laravel** y el motor de plantillas **Blade**. Su objetivo es administrar la información vital de un equipo de carreras virtual (Simracing), permitiendo la visualización de pilotos, gestión de setups y calendario de carreras.
+
+## 🚀 Tecnologías Utilizadas
+
+* **Lenguaje:** PHP 8
+* **Framework:** Laravel (Arquitectura MVC)
+* **Frontend:** Blade Templates, HTML5, CSS3, JavaScript
+* **Entorno de Desarrollo:** Visual Studio Code
+* **Control de Versiones:** Git / GitHub
+
+## ✅ Estado de los Requisitos
+
+Actualmente, el proyecto cubre un **85%** de los requisitos establecidos:
+
+- [x] Estructura de carpetas y organización MVC.
+- [x] Rutas y Controladores en Laravel.
+- [x] Vistas dinámicas con Blade.
+- [x] Gestión de base de datos (Migraciones/Modelos).
+- [ ] Módulo de correos electrónicos (Pendiente).
+- [x] Pruebas de rendimiento y validación.
+
+## 🧪 Testing y Calidad (QA)
+
+Se han realizado auditorías de rendimiento, accesibilidad y buenas prácticas utilizando **Google Lighthouse**.
+
+### 📊 Reporte Lighthouse
+*El sitio cumple con los estándares de rendimiento web y SEO.*
+
+> <img width="1365" height="657" alt="image" src="https://github.com/user-attachments/assets/ab5bd25c-3949-4ba6-9ed5-c1541150d3ae" />
+
+## 🛠️ Instalación y Configuración
+
+Si deseas correr este proyecto localmente, sigue estos pasos:
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/javpulmez/simracing-team.git](https://github.com/javpulmez/simracing-team.git)
+    cd simracing-team
+    ```
+
+2.  **Instalar dependencias de PHP:**
+    ```bash
+    composer install
+    ```
+
+3.  **Configurar entorno:**
+    * Duplicar el archivo `.env.example` y renombrarlo a `.env`.
+    * Configurar las credenciales de base de datos en el archivo `.env`.
+
+4.  **Generar clave de aplicación:**
+    ```bash
+    php artisan key:generate
+    ```
+
+5.  **Ejecutar migraciones:**
+    ```bash
+    php artisan migrate
+    ```
+
+6.  **Iniciar servidor local:**
+    ```bash
+    php artisan serve
+    ```
+    Visita `http://localhost:8000` en tu navegador.
+
+## ✒️ Autor
+
+* **Javier Pulido** - [Perfil de GitHub](https://github.com/javpulmez)
+
+---
+*Proyecto desarrollado siguiendo los lineamientos del repositorio [samuelmg/programacion-internet](https://github.com/samuelmg/programacion-internet).*
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
